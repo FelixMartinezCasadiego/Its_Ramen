@@ -1,4 +1,6 @@
 import './App.css';
+
+// Carpeta Components
 import NavBar from './Components/NavBar';
 
 function App() {
@@ -7,7 +9,6 @@ function App() {
 
       <NavBar />
       <h1>Its Ramen !</h1> 
-
 
     </div>
   );
