@@ -1,0 +1,26 @@
+/* Estilo para NavBar */
+.NavHome{
+    display: flex;
+    background-color: rgba(5, 7, 12, 0.5);
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.ulList{
+    list-style-type: none;
+}
+
+/* Logo del NavBar */
+
+.LogoNav{
+    width: 80px;
+    margin-left: 20px;
+}
