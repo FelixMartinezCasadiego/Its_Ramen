@@ -1,14 +1,14 @@
 import React from "react";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({title,description}) => {
     return(
         <div>
             
             <h1>
-                {props.title}
+                {title}
             </h1>
             <h2>
-                {props.description}
+                {description}
             </h2>
             
         </div>

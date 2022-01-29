@@ -3,21 +3,21 @@ import './App.css';
 
 // Carpeta Components
 import NavBar from './Components/NavBar';
-import ItemListContainer from './Components/ItemListContainer';
+import ItemCount from './Components/ItemCount';
 
 class App extends Component {
+
   render() {
     return(
       <div className='App'>
+
         <NavBar />
-        <ItemListContainer 
-        title="Tipo de Ramen 1" 
-        description="Breve descipción 1"/>
-        <ItemListContainer 
-        title="Tipo de Ramen 2" 
-        description="Breve descipción 2"/>
+
+        <ItemCount />
         
       </div>
+
+
     ); 
   }
 }

@@ -2,7 +2,7 @@
 
 import './NavBar.css';
 import Logo from './Img/Logo.png';
-import CartWidget from './CartWidget';
+
 
 const NavBar = () => {
     return(
@@ -19,7 +19,7 @@ const NavBar = () => {
                 </ul>
             </nav>
 
-            <CartWidget />
+
 
         </>
 
