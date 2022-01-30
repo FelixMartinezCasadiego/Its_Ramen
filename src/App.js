@@ -4,6 +4,7 @@ import './App.css';
 // Carpeta Components
 import NavBar from './Components/NavBar';
 import ItemCount from './Components/ItemCount';
+import ItemListContainer from './Components/ItemListContainer';
 
 class App extends Component {
 
@@ -13,7 +14,10 @@ class App extends Component {
 
         <NavBar />
 
-        <ItemCount />
+        <ItemListContainer 
+          title= 'Hola'
+          description='Adios'
+        />
         
       </div>
 
