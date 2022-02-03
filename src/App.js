@@ -3,8 +3,7 @@ import './App.css';
 
 // Carpeta Components
 import NavBar from './Components/NavBar';
-import ItemCount from './Components/ItemCount';
-import ItemListContainer from './Components/ItemListContainer';
+import ItemDetailContainer from './Components/ItemDetailContainer';
 
 class App extends Component {
 
@@ -14,10 +13,7 @@ class App extends Component {
 
         <NavBar />
 
-        <ItemListContainer 
-          title= 'Hola'
-          description='Adios'
-        />
+        <ItemDetailContainer />
         
       </div>
 
