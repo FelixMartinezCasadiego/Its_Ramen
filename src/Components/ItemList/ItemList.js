@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 
-import ItemDetail from "./ItemDetail";
+import Item from '../Item/Item';
 
-const GetItem = () => {
-    const [games, setGames] = useState([]);
+const ItemList = () => {
+    const [users, setUsers] = useState([]);
 
     useEffect(()=> {
-        fetch('https://breakingbadapi.com/api/characters')
+        fetch('https://jsonplaceholder.typicode.com/users')
         .then((response) => response.json())
-        .then((json) => setGames(json))
+        .then((json) => setUsers(json))
     }, []);
 
     return(
         <div>
 
-            {games.map((user) => {
+            {users.map((user) => {
 
                 return (
                     <div key={user.id} >
-                        <ItemDetail data={user} />
+                        <Item data={user} />
                     </div>
                 );
 
@@ -29,4 +29,4 @@ const GetItem = () => {
 };
 
 
-export default GetItem;
+export default ItemList;
