@@ -1,7 +1,8 @@
 // Import
 
 import './NavBar.css';
-import Logo from './Img/Logo.png'
+import Logo from '../Img/Logo.png';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return(
@@ -10,10 +11,9 @@ const NavBar = () => {
             <img src={Logo} className="LogoNav" />
 
             <ul className="ulList">
-                <li>Home</li>
-                <li>Menu</li>
-                <li>Ramen History</li>
-                <li>Locations</li>
+                <Link to="/">Home</Link>
+                <Link to="/Comics">Comics</Link>
+                <Link to="/Search">Search</Link>
             </ul>
 
         </nav>

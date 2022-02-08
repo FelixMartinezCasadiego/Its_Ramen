@@ -1,16 +1,41 @@
+import React, { Component } from 'react';
 import './App.css';
-import NavBar from './Components/NavBar';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
+// Components Folders
+import NavBar from './Components/NavBar/NavBar';
+import ItemDetailContainer from './Components/ItemDetail/ItemDetailContainerCopy';
 
-      <NavBar />
-      <h1>Its Ramen !</h1> 
+// Pages Folders
+import Home from './Components/NavBar/Pages/Home';
+import Comics from './Components/NavBar/Pages/Comics';
+import Search from './Components/NavBar/Pages/Search';
 
 
-    </div>
-  );
+class App extends Component {
+
+  render() {
+    return(
+
+      <Router>
+
+        <div className='App'>
+          <NavBar />
+        
+
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Comics" element={<Comics />} />
+            <Route path="/Search" element={<Search />} />
+            <Route path='/detail/:id' element={<ItemDetailContainer />} />
+        </Routes>
+
+        </div>
+      </Router>
+
+    ); 
+  }
 }
+
 
 export default App;
