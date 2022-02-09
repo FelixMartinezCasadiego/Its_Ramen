@@ -1,13 +1,9 @@
 import React from "react";
-// import GetItem from "../GetItem/GetItem";
 import { useEffect, useState } from 'react';
-//import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import '../ItemList/GetItem.css';
 import ItemDetail from "./ItemDetail";
-
-
 
 
 const ItemDetailContainerCopy = () => {
@@ -20,6 +16,14 @@ const ItemDetailContainerCopy = () => {
 
     //console.log(userID);
 
+    // useEffect(()=>{
+    //     axios.get(`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=dffad683d6ae99c9bacd9bc034b349e5&hash=bd681d5b78f30e596868d9ce3b27129e/${userID}`).then((res) => 
+    //       setCharacters(res.data.data.results)
+    
+    //     ).catch(error=>console.log(error))
+    
+    //   },[userID])
+
     useEffect(()=>{
         axios.get(`https://breakingbadapi.com/api/characters/${userID}`).then((res) => 
           {setCharacters(res.data)
@@ -31,7 +35,7 @@ const ItemDetailContainerCopy = () => {
 
 
       return(
-        <div className="Get_Item_Grid">
+        <div className="ItemDetailCard">
 
             {characters.map((char) => {
 
@@ -42,9 +46,9 @@ const ItemDetailContainerCopy = () => {
                             <ItemDetail data={char} />
                         </Link>   */}
                     </div>
-                );
+                )
 
-            })};
+            })}
             
         </div>
 );

@@ -1,8 +1,4 @@
 import * as React from 'react';
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Typography from '@mui/material/Typography';
 import { CardActionArea, Card, CardContent, CardMedia, Typography } from '@mui/material';
 
 
@@ -12,17 +8,25 @@ const ItemDetail = ({ data }) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="345px"
+          height="100%"
           image={data.img}
-          // image={`${data.thumbnail.path}.${data.thumbnail.extension}`}
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Name: {data.name}
+          <Typography  variant="h6">
+            Name: {data.name} 
+          </Typography>
+          <Typography variant="h6">
+            Nickname: {data.nickname}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Status: {data.status}
+            birthday: {data.birthday}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Occupation: {data.occupation}
+          </Typography>
+          <Typography variant="h6">
+            status: {data.status}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -11,9 +11,9 @@ const ItemList = ({data}) => {
             {data.map((char) => {
 
                 return (
-                    <div key={char.id} >
+                    <div key={char.char_id} >
 
-                        <Link to={`/detail/${char.id}`}>
+                        <Link to={`/detail/${char.char_id}`} className='Raya'>
                             <Item data={char} />
                         </Link>
 

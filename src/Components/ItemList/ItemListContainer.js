@@ -17,19 +17,19 @@ const ItemListContainer = () => {
 
     const [ characters, setCharacters ] = useState([])
 
-    useEffect(()=>{
-      axios.get('https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=dffad683d6ae99c9bacd9bc034b349e5&hash=bd681d5b78f30e596868d9ce3b27129e').then(res=>{
-        setCharacters(res.data.data.results)
+    // useEffect(()=>{
+    //   axios.get('https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=dffad683d6ae99c9bacd9bc034b349e5&hash=bd681d5b78f30e596868d9ce3b27129e').then(res=>{
+    //     setCharacters(res.data.data.results)
   
-      }).catch(error=>console.log(error))
+    //   }).catch(error=>console.log(error))
   
-    },[])
+    // },[])
 
-    // useEffect(() => {
-	// 	axios('https://breakingbadapi.com/api/characters').then((res) =>
-	// 		setCharacters(res.data)
-	// 	);
-	// }, []);
+    useEffect(() => {
+		axios('https://breakingbadapi.com/api/characters').then((res) =>
+			setCharacters(res.data)
+		);
+	}, []);
   
     console.log(characters)
 

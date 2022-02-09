@@ -4,12 +4,12 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 // Components Folders
 import NavBar from './Components/NavBar/NavBar';
-import ItemDetailContainer from './Components/ItemDetail/ItemDetailContainerCopy';
 
 // Pages Folders
 import Home from './Components/NavBar/Pages/Home';
-import Comics from './Components/NavBar/Pages/Comics';
+import Episodes from './Components/NavBar/Pages/Episodes';
 import Search from './Components/NavBar/Pages/Search';
+import ItemDetailContainerCopy from './Components/ItemDetail/ItemDetailContainerCopy';
 
 
 class App extends Component {
@@ -25,9 +25,9 @@ class App extends Component {
 
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Comics" element={<Comics />} />
+            <Route path="/Episodes" element={<Episodes />} />
             <Route path="/Search" element={<Search />} />
-            <Route path='/detail/:id' element={<ItemDetailContainer />} />
+            <Route path='/detail/:id' element={<ItemDetailContainerCopy />} />
         </Routes>
 
         </div>

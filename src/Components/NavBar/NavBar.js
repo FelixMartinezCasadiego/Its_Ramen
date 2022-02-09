@@ -11,9 +11,9 @@ const NavBar = () => {
             <img src={Logo} className="LogoNav" />
 
             <ul className="ulList">
-                <Link to="/">Home</Link>
-                <Link to="/Comics">Comics</Link>
-                <Link to="/Search">Search</Link>
+                <Link className='Raya' to="/">Home</Link>
+                <Link className='Raya' to="/Episodes">Episodes</Link>
+                <Link className='Raya' to="/Search">Search</Link>
             </ul>
 
         </nav>
