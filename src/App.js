@@ -21,6 +21,7 @@ class App extends Component {
 
         <div className='App'>
           <NavBar />
+         
         
 
         <Routes>
@@ -31,7 +32,9 @@ class App extends Component {
         </Routes>
 
         </div>
-      </Router>
+      </Router>   
+
+      
 
     ); 
   }
