@@ -28,11 +28,11 @@ const ItemCount = ({funcionAgrega, stock}) => {
 
   return (
     <div className="App">
-      <h1>Counter</h1>
+      <h1>Carrito</h1>
       <p>{counter}</p>
 
-      <button onClick={handlerCounterUp}>Incrementar</button>
-      <button onClick={handlerCounterDown}>Decrementar</button>
+      <button onClick={handlerCounterUp}>Agregar</button>
+      <button onClick={handlerCounterDown}>Eliminar</button>
 
       <h2>Stock = 5</h2>
 

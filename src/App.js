@@ -10,6 +10,7 @@ import Home from './Components/NavBar/Pages/Home';
 import Episodes from './Components/NavBar/Pages/Episodes';
 import Search from './Components/NavBar/Pages/Search';
 import ItemDetailContainerCopy from './Components/ItemDetail/ItemDetailContainerCopy';
+import { CartProvider } from './Contex/CartContext';
 
 
 class App extends Component {
@@ -20,7 +21,10 @@ class App extends Component {
       <Router>
 
         <div className='App'>
+
+          <CartProvider>
           <NavBar />
+          </CartProvider>
          
         
 

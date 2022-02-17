@@ -1,7 +1,6 @@
 import Item from './Item'
 import { Link } from "react-router-dom";
 import '../ItemList/GetItem.css'
-import { Button } from '@mui/material';
 
 
 const ItemList = ({data}) => {
@@ -22,8 +21,6 @@ const ItemList = ({data}) => {
                 );
 
             })};
-
-            <Button> Guardar </Button>
 
         </div>
 
