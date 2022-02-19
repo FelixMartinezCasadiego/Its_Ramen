@@ -13,27 +13,21 @@ const initialState = [
     {id: 654, name: 'Arroz N° 3', price: 15},
 ]; 
 
-
 // 2 - Crear componente Provider
 
 export const ItemProvider = ({children}) => {
     const [items, setItems] = useState(initialState);
-
-    const foo = () => {
-        alert( items.length )
-    };
-
-    return(
-        <ItemContext.Provider value={[items, setItems, foo]}>
-            {/* 4 - Props, children */}
-            {children}
-        </ItemContext.Provider>
-    );  
 }
 
-// const foo = () => {
-//     alert(`Cantidad de items en nuestro carrito: ${items.length}`)
-// };
+const foo = () => {
+    alert(`Cantidad de items en nuestro carrito: ${items.length}`)
+};
 
 // 3 - Retornamos nuestro context con un .Provider
 
+return(
+    <ItemContext.Provider value={[items, setItems, foo]}>
+        {/* 4 - Props, children */}
+        {children}
+    </ItemContext.Provider>
+);

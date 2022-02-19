@@ -1,8 +1,22 @@
 .App {
-  text-align: center;
-  background: rgb(7, 51, 8);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* text-align: center; */
+  /* background: rgb(7, 51, 8); */
   /* background: url('../../../ItsRamen/ramen-app/src/Components/Img/Fondo.jpg');
   background-size: 100%; */
+}
+
+.cardContext{
+  background-color: green;
+  border: 2px solid black;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20PX;
 }
 
 

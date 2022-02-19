@@ -3,6 +3,7 @@ import { CardActionArea, Card, CardContent, CardMedia, Typography, CardActions, 
 import ItemCount from '../ItemCount/ItemCount';
 
 
+
 const ItemDetail = ({ data }) => {
 
   const [car ,setCar] = React.useState([]);
