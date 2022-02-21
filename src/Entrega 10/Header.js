@@ -8,7 +8,8 @@ const Header = () => {
     return (
         <nav className="NavHome">
             <p>Carrito: {items.length} </p>
-            <button onClick={()=> setItems([]) }>Delete</button>
+            <button onClick={()=> onDelete() }>Delete</button>
+            <button onClick={()=> onAdd() }>Delete</button>
             <button onClick={ ()=> foo()}>Status</button>
         </nav>
     )

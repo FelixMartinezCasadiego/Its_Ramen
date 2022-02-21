@@ -19,9 +19,15 @@ const initialState = [
 export const ItemProvider = ({children}) => {
     const [items, setItems] = useState(initialState);
 
+    const [cart, setCart] = useState([]);
+
     const foo = () => {
         alert( items.length )
     };
+
+    const onAdd = () => {
+        const []
+    }
 
     return(
         <ItemContext.Provider value={[items, setItems, foo]}>
