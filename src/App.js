@@ -10,6 +10,7 @@ import Home from './Components/NavBar/Pages/Home';
 import Episodes from './Components/NavBar/Pages/Episodes';
 import Search from './Components/NavBar/Pages/Search';
 import ItemDetailContainerCopy from './Components/ItemDetail/ItemDetailContainerCopy';
+import {ItemProvider} from './Components/Context/cartContext'
 
 
 class App extends Component {

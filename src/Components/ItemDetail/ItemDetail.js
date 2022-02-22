@@ -1,27 +1,22 @@
 import * as React from 'react';
-import { CardActionArea, Card, CardContent, CardMedia, Typography, CardActions, Button } from '@mui/material';
+import { CardActionArea, Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
 import ItemCount from '../ItemCount/ItemCount';
 
 
 const ItemDetail = ({ data }) => {
 
-  const [car ,setCar] = React.useState([]);
+  const [cart ,setCart] = React.useState([]);
 
-  // const newAdd ={
-  //   name: data.name,
-  //   image: data.img,
-  //   occupation: data.occupation,
-  //   status: data.status,
-  //  }
-
-  //  const onAdd1 = (null);
 
   const onAdd = (q) => {
 
-    setCar(q)
+    setCart = (q) ;
+
+    // let obj = {[ ...data, q]};
+    // addCart(obj) 
   }
 
-  console.log(car);
+  console.log(cart);
 
 
   return (
@@ -53,7 +48,7 @@ const ItemDetail = ({ data }) => {
             <ItemCount funcionAgrega={onAdd} stock={5} />
 
             {
-              car >= 1 ? <Button>Ir al carrito</Button> : null
+              cart >= 1 ? <Button>Ir al carrito</Button> : null
             }
           
         </CardContent>
