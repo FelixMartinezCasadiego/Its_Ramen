@@ -1,29 +1,15 @@
-import Item from './Item'
-import { Link } from "react-router-dom";
-import '../ItemList/GetItem.css'
+import Item from "./Item";
 
-
-const ItemList = ({data}) => {
+const ItemList = ({albumsData}) => {
 
     return(
-        
-        <div className="Get_Item_Grid">
-            {data.map((char) => {
-
-                return (
-                    <div key={char.char_id} >
-
-                        <Link to={`/detail/${char.char_id}`} className='Raya'>
-                            <Item data={char} />
-                        </Link>
-
-                    </div>
-                );
-
-            })};
+        <div>
+            {albumsData.map((albumsData) => {
+        return(
+          <Item albumsData={albumsData} key={albumsData.id} />
+        )
+      })} 
         </div>
-
-
     )
 
 }

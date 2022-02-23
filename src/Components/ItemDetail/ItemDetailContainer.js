@@ -3,9 +3,10 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 
 // Firebase
 import {db} from '../../firebase/firebaseConfig'
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 
-const ItemListContainer = () => {
+
+const ItemDetailContainer = () => {
 
     const [albumsData, setAlbumsData] = useState([]);
 
@@ -23,9 +24,17 @@ const ItemListContainer = () => {
     }, []);
 
     return (
-        <ItemList albumsData={albumsData} />
+
+        <div>
+            {albumsData.map((albumsData) => {
+
+                return(
+                    <ItemDetail albumsData={albumsData} key={albumsData.id} />
+                )
+            })} 
+        </div>
     )
 
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;
