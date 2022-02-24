@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Episodes = () => {
+const Menu = () => {
     return(
         <div>
             <p>En esta zona se reflejaran episodios</p>
@@ -8,4 +8,4 @@ const Episodes = () => {
     )
 };
 
-export default Episodes;
+export default Menu;

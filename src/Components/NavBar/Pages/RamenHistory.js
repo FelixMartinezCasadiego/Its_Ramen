@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Search = () => {
+const RamenHistory = () => {
     return(
         <div>
             <p>En esta zona será para busquedas</p>
@@ -8,4 +8,4 @@ const Search = () => {
     )
 };
 
-export default Search;
+export default RamenHistory;

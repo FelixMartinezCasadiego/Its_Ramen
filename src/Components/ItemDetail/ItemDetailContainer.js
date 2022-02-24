@@ -5,6 +5,9 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import {db} from '../../firebase/firebaseConfig'
 import ItemDetail from "./ItemDetail";
 
+// React - Router - Dom
+import {Link} from 'react-router-dom';
+
 
 const ItemDetailContainer = () => {
 
@@ -29,7 +32,9 @@ const ItemDetailContainer = () => {
             {albumsData.map((albumsData) => {
 
                 return(
-                    <ItemDetail albumsData={albumsData} key={albumsData.id} />
+                    <Link to='/RamenHistoty'>
+                        <ItemDetail albumsData={albumsData} key={albumsData.id} />
+                    </Link>
                 )
             })} 
         </div>

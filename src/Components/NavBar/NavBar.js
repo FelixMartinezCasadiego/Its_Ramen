@@ -13,6 +13,8 @@ const NavBar = () => {
                 <li>Home</li>
                 <li>Menu</li>
                 <li>Ramen History</li>
+                <li>About</li>
+
             </ul>
 
         </nav>
