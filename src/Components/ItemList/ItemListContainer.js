@@ -5,9 +5,6 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import {db} from '../../firebase/firebaseConfig'
 import ItemList from "./ItemList";
 
-// React - Router - Dom
-import {Link} from 'react-router-dom';
-
 const ItemListContainer = () => {
 
     const [albumsData, setAlbumsData] = useState([]);
@@ -26,11 +23,10 @@ const ItemListContainer = () => {
     }, []);
 
     return (
-
-        <Link to='/RamenHistory'>
+        <div>
             <ItemList albumsData={albumsData} />
-        </Link>
-        
+        </div>
+            
     )
 
 };

@@ -1,5 +1,8 @@
 import Item from "./Item";
-import "./ItemList.css"
+import "./ItemList.css";
+
+// React - Router - Dom
+import {Link} from 'react-router-dom';
 
 const ItemList = ({albumsData}) => {
 
@@ -7,7 +10,9 @@ const ItemList = ({albumsData}) => {
         <div className="CardOrden1" >
             {albumsData.map((albumsData) => {
         return(
-          <Item albumsData={albumsData} key={albumsData.id} />
+          <Link to={`details/${albumsData.id}`}>
+            <Item albumsData={albumsData} key={albumsData.id} />
+          </Link>
         )
       })} 
         </div>

@@ -4,8 +4,6 @@ import React from 'react';
 
 // Components
 import NavBar from './Components/NavBar/NavBar';
-import Item2 from './Components/ItemDetail/Item2';
-import ItemDetail from './Components/ItemDetail/ItemDetail';
 
 // React - Router - Dom
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -15,6 +13,7 @@ import Home from './Components/NavBar/Pages/Home';
 import About from './Components/NavBar/Pages/About';
 import Menu from './Components/NavBar/Pages/Menu';
 import RamenHistory from './Components/NavBar/Pages/RamenHistory'
+import ItemDetailContainer from './Components/ItemDetail/ItemDetailContainer';
 
 
 const App = () => {
@@ -28,7 +27,7 @@ const App = () => {
           <Route path='/Menu' element={<Menu />} />
           <Route path='/RamenHistory' element={<RamenHistory />} />
           <Route path='/about' element={<About />} />
-          <Route path='/details/:id' element={<ItemDetail  />} />
+          <Route path='/details/:id' element={<ItemDetailContainer  />} />
           
         </Routes>
       </div>
