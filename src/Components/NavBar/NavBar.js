@@ -2,6 +2,8 @@
 import './NavBar.css';
 import Logo from '../Img/Logo.png';
 import {Link} from 'react-router-dom';
+import MenuCategory from '../MenuCategory/MenuCategory';
+
 
 const NavBar = () => {
     return(
@@ -12,7 +14,7 @@ const NavBar = () => {
             <ul className="ulList">
 
                 <Link to='/'>Home</Link>
-                <Link to='/Menu'>Menu</Link>
+                <MenuCategory />
                 <Link to='RamenHistory'>Ramen History</Link>
                 <Link to='About'>About</Link>
 
