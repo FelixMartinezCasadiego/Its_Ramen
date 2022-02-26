@@ -15,9 +15,9 @@ const NavBar = () => {
 
                 <Link to='/'>Home</Link>
                 <MenuCategory />
-                <Link to='RamenHistory'>Ramen History</Link>
-                <Link to='About'>About</Link>
-
+                <Link to='/RamenHistory'>Ramen History</Link>
+                <Link to='/About'>About</Link>
+                <Link to='/Shop'><i class="fa-solid fa-cart-shopping"></i></Link>
             </ul>
 
         </nav>

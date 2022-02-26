@@ -14,6 +14,7 @@ import About from './Components/NavBar/Pages/About';
 import RamenHistory from './Components/NavBar/Pages/RamenHistory'
 import ItemDetailContainer from './Components/ItemDetail/ItemDetailContainer';
 import MenuCart from './Components/NavBar/Pages/MenuCart';
+import Shop from './Components/NavBar/Pages/Shop/Shop';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/RamenHistory' element={<RamenHistory />} />
           <Route path='/about' element={<About />} />
+          <Route path='/Shop' element={<Shop />} />
           <Route path='/details/:id' element={<ItemDetailContainer  />} />
           <Route path='/category/:requested' element={<MenuCart  />} />
         </Routes>

@@ -3,6 +3,9 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
+// React Router Dom
+import { Link } from 'react-router-dom';
+
 
 export default function Home() {
   return (
@@ -13,20 +16,18 @@ export default function Home() {
         </div> 
 
         <ImageList sx={{ width: 500, height: 450 }}>
-        {itemData.map((item) => (
+          {itemData.map((item) => (
             <ImageListItem key={item.img}>
-            <img
+              <img
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 alt={item.title}
                 loading="lazy"
-            />
-            <ImageListItemBar
+              />
+              <ImageListItemBar
                 title={item.title}
-
-            />
-            </ImageListItem>
-        ))}
+              />
+            </ImageListItem>))}
         </ImageList>
 
     </div>

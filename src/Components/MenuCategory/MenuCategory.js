@@ -36,7 +36,7 @@ import { Link } from 'react-router-dom';
         }}>
           
         <MenuItem>
-          <Link to='/category/Starter'> Starter </Link>
+          <Link to='/category/Starter'> Appetizers </Link>
         </MenuItem>
 				
         <MenuItem>

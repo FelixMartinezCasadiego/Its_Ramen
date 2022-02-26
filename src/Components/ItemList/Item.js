@@ -11,14 +11,13 @@ import { CardActionArea } from '@mui/material';
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="100%"
           image={albumsData.img}
           alt={albumsData.title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {albumsData.title}
-            {albumsData.price}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
             Price: {albumsData.price}
