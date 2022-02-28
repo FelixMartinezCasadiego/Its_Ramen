@@ -27,6 +27,7 @@ const ItemDetail = ({albumsData}) => {
             {albumsData.resume}
           </Typography>
         </CardContent>
+        <button>Add to cart</button>
       </CardActionArea>
     </Card>
   );

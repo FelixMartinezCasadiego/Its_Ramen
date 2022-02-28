@@ -1,11 +1,25 @@
 import * as React from 'react';
+
+// Material UI
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
+// Context
+import { ItemsContext } from '../../Context/ItemsContext';
+import { useContext } from 'react';
+
  const Item = ({ albumsData }) => {
+
+  const [ItemsCart, setItemsCart] = useContext(ItemsContext);
+
+  const addToCart = () =>{
+    const ItemsToCart = {name: albumsData.title, price: albumsData.price}
+    setItemsCart(curr=>[...curr, ItemsToCart]);
+  }
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -26,6 +40,7 @@ import { CardActionArea } from '@mui/material';
             {albumsData.resume}
           </Typography>
         </CardContent>
+        <button onClick={addToCart} >Add to cart</button>
       </CardActionArea>
     </Card>
   );

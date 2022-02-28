@@ -8,6 +8,9 @@ import NavBar from './Components/NavBar/NavBar';
 // React - Router - Dom
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+// Context
+import { ItemsProvider } from './Context/ItemsContext';
+
 // Views
 import Home from './Components/NavBar/Pages/Home';
 import About from './Components/NavBar/Pages/About';
@@ -21,17 +24,20 @@ const App = () => {
 
   return (
     <Router>
-      <div className='App BackgroundApp'>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/RamenHistory' element={<RamenHistory />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/Shop' element={<Shop />} />
-          <Route path='/details/:id' element={<ItemDetailContainer  />} />
-          <Route path='/category/:requested' element={<MenuCart  />} />
-        </Routes>
-      </div>
+
+      <ItemsProvider>
+        <div className='App BackgroundApp'>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/RamenHistory' element={<RamenHistory />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/Shop' element={<Shop />} />
+            <Route path='/details/:id' element={<ItemDetailContainer  />} />
+            <Route path='/category/:requested' element={<MenuCart  />} />
+          </Routes>
+        </div>
+      </ItemsProvider>
     </Router>
   )
 }

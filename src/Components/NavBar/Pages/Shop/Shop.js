@@ -1,5 +1,5 @@
-// useState
-import React, {useState} from "react";
+// useState y useContext
+import React, {useState, useContext} from "react";
 
 // Form Css
 import './Shop.css';
@@ -14,6 +14,9 @@ import { TextField } from "@mui/material";
 // Message Purchase
 import MessagePurchase from "../../../MessagePurchase/MessagePurchase";
 
+// Context
+import { ItemsContext } from "../../../../Context/ItemsContext";
+
 const initialState = {
     name: '',
     lastName: '',
@@ -22,9 +25,13 @@ const initialState = {
 
 const Shop = () => {
 
+    const [ItemsCart, setItemsCart] = useContext(ItemsContext);
+
+    const totalPrice = ItemsCart.reduce((acc, curr) => acc + curr.price,0);
+
     const[ values, setValues] = useState(initialState);
 
-    const [purchaseID, setPurchaseID] = useState('');
+    const [purchaseID, setPurchaseID] = useState(''); 
 
     const onChange=(e) => {
         const {value,name} = e.target;
@@ -43,7 +50,14 @@ const Shop = () => {
     }
 
     return(
-        <div>Form
+        <div>
+
+            <div>
+                <span>item in cart: {ItemsCart.length} </span>
+                <br/>
+                <span>total price: {totalPrice} </span>
+                <br/>
+            </div>
 
             <form className="FormContainer" onSubmit={onSubmit}>
                 <TextField
