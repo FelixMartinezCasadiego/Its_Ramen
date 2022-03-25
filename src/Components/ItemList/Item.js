@@ -15,10 +15,20 @@ import { useContext } from 'react';
 
   const [ItemsCart, setItemsCart] = useContext(ItemsContext);
 
-  const addToCart = () =>{
-    const ItemsToCart = {name: albumsData.title, price: albumsData.price}
-    setItemsCart(curr=>[...curr, ItemsToCart]);
+  // const addToCart = () =>{
+  //   const ItemsToCart = {name: albumsData.title, price: albumsData.price}
+  //   setItemsCart(curr=>[...curr, ItemsToCart]);
+  // }
+
+  const onAdd = (products) => {
+    const exist = ItemsCart.find(x=> x.id === products.id);
+    if(exist){
+       setItemsCart(ItemsCart.map(x=> x.id === products.id ? {...exist, qty: exist.qty +1} : x ))
+    } else {
+       setItemsCart([...ItemsCart, {...products, qty: 1} ])
   }
+}
+
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -40,7 +50,7 @@ import { useContext } from 'react';
             {albumsData.resume}
           </Typography>
         </CardContent>
-        <button onClick={addToCart} >Add to cart</button>
+        <button onClick={onAdd} >Add to cart</button>
       </CardActionArea>
     </Card>
   );

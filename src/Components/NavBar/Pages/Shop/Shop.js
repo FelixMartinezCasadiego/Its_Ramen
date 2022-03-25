@@ -26,6 +26,14 @@ const initialState = {
 const Shop = () => {
 
     const [ItemsCart, setItemsCart] = useContext(ItemsContext);
+    // const onAdd = (products) => {
+    //     const exist = ItemsCart.find(x=> x.id === products.id);
+    //     if(exist){
+    //         setItemsCart(ItemsCart.map(x=> x.id === products.id ? {...exist, qty: exist.qty +1} : x ))
+    //     } else {
+    //         setItemsCart([...ItemsCart, {...products, qty: 1} ]) 
+    //     }
+    // }
 
     const totalPrice = ItemsCart.reduce((acc, curr) => acc + curr.price,0);
 
@@ -80,6 +88,7 @@ const Shop = () => {
                 />
                 <button className="btnASendAction">Send</button>
                 {purchaseID && <MessagePurchase purchaseID={purchaseID} /> }
+                {}
             </form>
 
         </div> 
