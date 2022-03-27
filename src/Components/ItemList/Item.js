@@ -15,11 +15,6 @@ import { useContext } from 'react';
 
   const [ItemsCart, setItemsCart] = useContext(ItemsContext);
 
-  // const addToCart = () =>{
-  //   const ItemsToCart = {name: albumsData.title, price: albumsData.price}
-  //   setItemsCart(curr=>[...curr, ItemsToCart]);
-  // }
-
   const onAdd = (products) => {
     const exist = ItemsCart.find(x=> x.id === products.id);
     if(exist){
@@ -43,14 +38,10 @@ import { useContext } from 'react';
           <Typography gutterBottom variant="h5" component="div">
             {albumsData.title}
           </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            Price: {albumsData.price}
-          </Typography>
           <Typography variant="body2" color="text.secondary">
             {albumsData.resume}
           </Typography>
         </CardContent>
-        <button onClick={onAdd} >Add to cart</button>
       </CardActionArea>
     </Card>
   );

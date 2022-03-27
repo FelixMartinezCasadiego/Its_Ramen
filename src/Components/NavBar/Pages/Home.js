@@ -3,6 +3,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
+
 // React Router Dom
 import { Link } from 'react-router-dom';
 
@@ -12,7 +13,9 @@ export default function Home() {
     <div>
         <div> 
             <h3> Ramen History </h3>
-            <img src='https://i.imgur.com/EL3w4oI.gif' alt='Ramen History' /> 
+            <Link to='/RamenHistory'>
+              <img src='https://i.imgur.com/EL3w4oI.gif' alt='Ramen History' />
+            </Link> 
         </div> 
 
         <ImageList sx={{ width: 500, height: 450 }}>
@@ -24,9 +27,11 @@ export default function Home() {
                 alt={item.title}
                 loading="lazy"
               />
-              <ImageListItemBar
-                title={item.title}
-              />
+              <Link to={`/category/${item.title}`}>
+                <ImageListItemBar
+                  title={item.title}
+                />
+              </Link>
             </ImageListItem>))}
         </ImageList>
 
@@ -38,6 +43,7 @@ const itemData = [
   {
     img: 'https://i.pinimg.com/originals/fb/68/34/fb683473369848e5f176c2fd4df3249a.jpg',
     title: 'Starter',
+
   },
   {
     img: 'https://wallpapercave.com/wp/wp7507998.jpg',
@@ -53,27 +59,3 @@ const itemData = [
     title: 'Dessert',
   },
 ];
-
-
-
-// import React from 'react';
-// // import ItemListContainer from '../../ItemList/ItemListContainer';
-// import RamenHistory from '../../Img/RamenHistory.jpg';
-// import '../NavBar.css';
-
-// const Home = () => {
-//     return(
-//         <div className='BackgroundHome'>
-
-            
-//             <div> 
-//                 <h3> Ramen History </h3>
-//                 <img src={RamenHistory} alt='Ramen History' /> 
-//             </div>
-
-//             {/* <ItemListContainer /> */}
-//         </div>
-//     );
-// };
-
-// export default Home;

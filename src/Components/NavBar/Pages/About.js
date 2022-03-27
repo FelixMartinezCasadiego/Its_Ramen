@@ -1,9 +1,8 @@
 import React from "react";
-import ItemListContainer from "../../ItemList/ItemListContainer";
 
 const About = () => {
     return (
-        <ItemListContainer />
+        <h2>Esta sesión tratará sobre que significa esta propuesta</h2>
     )
 }
 

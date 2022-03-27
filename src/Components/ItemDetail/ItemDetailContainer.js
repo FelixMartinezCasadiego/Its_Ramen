@@ -11,6 +11,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 import ItemDetail from './ItemDetail';
+import '../ItemList/ItemList.css'
 
 const ItemDetailContainer = () => { 
     const[albumData, setAlbumData] = useState ([]);
@@ -30,7 +31,7 @@ const ItemDetailContainer = () => {
     }, []);
 
   return(
-    <div>
+    <div className="CardOrden1">
         {albumData.map((albumsData) =>
         {return <ItemDetail albumsData={albumsData} /> }
         )}

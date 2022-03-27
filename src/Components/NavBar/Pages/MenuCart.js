@@ -14,12 +14,13 @@ import {
 
 // Components
 import Item from "../../ItemList/Item";
+import '../../ItemList/ItemList.css'
 
 const MenuCart = () => {
 
     const [albumCategoryData, setalbumCategoryData ] = useState([]);
     const {requested} = useParams();
-    console.log(albumCategoryData);
+
     
     useEffect( () => {
         const getsCategoryAlbums = async () => {
@@ -35,7 +36,7 @@ const MenuCart = () => {
     }, [requested]);
 
     return(
-        <div>
+        <div className="CardOrden1">
             {albumCategoryData.map((albumsData) => {
                 return (
                     <div>

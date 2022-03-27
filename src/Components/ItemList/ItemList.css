@@ -1,6 +1,9 @@
 .CardOrden1{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
 
     padding: 20px;
+    margin-bottom: 50px;
 }
