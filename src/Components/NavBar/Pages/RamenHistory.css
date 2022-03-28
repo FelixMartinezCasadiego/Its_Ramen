@@ -1,0 +1,23 @@
+/* H3 */
+
+.SubTitle{
+    font-size: 20px;
+}
+
+.RamenHis{
+    margin-left: 70px;
+    margin-right: 450px;
+}
+
+.Parrafo{
+    text-align: justify;
+}
+
+p span{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+    .RamenHis{    margin-left: 70px;
+        margin-right: 50px;}
+}
