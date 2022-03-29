@@ -1,0 +1,24 @@
+.ImgAb{
+    border-radius: 20px;
+}
+
+div h2{
+    color: rgb(112, 40, 100);
+}
+
+div span{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.centerAb{
+    margin: 0 20px 0px 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .ImgAb{
+        width: 350px;
+    }
+}

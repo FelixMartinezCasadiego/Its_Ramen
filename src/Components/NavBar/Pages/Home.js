@@ -2,6 +2,7 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import '../Pages/Home.css'
 
 
 // React Router Dom
@@ -12,7 +13,7 @@ export default function Home() {
   return (
     <div>
         <div> 
-            <h3> Ramen History </h3>
+            <Link to='/RamenHistory' className='LinkDecration' ><h3> Ramen History </h3></Link>
             <Link to='/RamenHistory'>
               <img src='https://i.imgur.com/EL3w4oI.gif' alt='Ramen History' />
             </Link> 
