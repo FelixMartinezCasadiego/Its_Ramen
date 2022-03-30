@@ -4,5 +4,5 @@ This repository is my CoderHouse academy final project; and it is about a little
 
 ## Description
 
-I used for the creation of this website: React JS, Firebase, MUI library, CSS.
+I used for the creation of this website: React JS, Firebase, Material UI library, CSS.
 
