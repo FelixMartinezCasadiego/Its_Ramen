@@ -9,13 +9,13 @@ I used for the creation of this website: React JS, Firebase, MUI library, CSS.
 ## Screenshots
 
 ### Home
-![](src/Components/Img/Home.png)
+![](Imagenes/Home.png)
 
 ### Ramen History
-![](src/Components/Img/RamenHistory1.png)
+![](Imagenes/RamenHistory1.png)
 
 ### Ramen
-![](src/Components/Img/Ramen1.png)
+![](Imagenes/Ramen1.png)
 
 ## Project visualization
 
