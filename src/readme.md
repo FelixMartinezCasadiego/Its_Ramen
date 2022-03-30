@@ -1,1 +1,1 @@
-El proyecto va a consistir en una App con respecto a la serie de breaking bad, donde se va a dar a conocer los personajes y se van a presentar los episodios; esto se esta evaluando la propuesta que sean de manera paga al usuario, de modo que tenga que comprar los episodios (de manera virtual)
+
