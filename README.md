@@ -6,6 +6,3 @@ This repository is my CoderHouse academy final project; and it is about a little
 
 I used for the creation of this website: React JS, Firebase, MUI library, CSS.
 
-## Project visualization
-
-Use this link to enter and view the complete project https://felixmartinezcasadiego.github.io/Its_Ramen/
